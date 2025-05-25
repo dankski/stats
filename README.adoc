@@ -1,0 +1,42 @@
+= Stats
+
+A collection of tools and scripts for statistical analysis.
+
+== Features
+
+- Data processing utilities
+- Statistical calculations
+- Visualization helpers
+
+== Getting Started
+
+Clone the repository:
+
+    git clone https://github.com/yourusername/stats.git
+    cd stats
+
+== Usage
+
+Refer to individual script documentation for usage examples.
+
+== Docker
+
+To build a docker image localy:
+
+    docker build -t stats-app .
+
+To run the container:
+
+    docker run -p 8080:8080 --rm stats-app
+
+Test the API:
+
+    curl http://localhost:8080/stats
+
+== Contributing
+
+Contributions are welcome! Please open issues or pull requests.
+
+== License
+
+This project is licensed under the MIT License.
