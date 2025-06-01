@@ -1,0 +1,11 @@
+replicaCount: 1
+
+image:
+  repository: ghcr.io/dankski/stats
+  tag: latest
+
+ingress:
+  enabled: true
+  host: stats.local
+  annotations:
+    traefik.ingress.kubernetes.io/router.entrypoints: web

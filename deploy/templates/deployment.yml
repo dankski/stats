@@ -1,22 +1,23 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: stat
+  name: {{ .Chart.Name }}
   labels:
-    app: stats
+    app: {{ .Chart.Name }}
 spec:
-  replicas: 1
+  replicas: {{ .Values.replicaCount }}
+spec:
   selector:
     matchLabels:
-      app: stats
+      app: {{ .Chart.Name }}
   template:
     metadata:
       labels:
-        app: stats
+        app: {{ .Chart.Name }}
     spec:
       containers:
-        - name: stats
-          image: ghcr.io/dankski/stats:latest
+        - name: {{ .Chart.Name }}
+          image: "{{ .Values.image.repository }}:{{ .Values.image.tag }}"
           ports:
             - containerPort: 8080
           imagePullPolicy: Always
